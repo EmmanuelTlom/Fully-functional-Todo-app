@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --very-light-grey: hsl(0, 0%, 98%);
+  --very-light-grayish-blue: hsl(236, 33%, 92%);
+  --light-grayish-blue: hsl(233, 11%, 84%);
+  --dark-grayish-blue: hsl(236, 9%, 61%);
+  --very-dark-grayish-blue: hsl(235, 19%, 35%);
+
+  --darkmode-very-dark-blue: hsl(235, 21%, 11%);
+  --darkmode-very-dark-desaturated-blue: hsl(235, 24%, 19%);
+  --darkmode-light-grayish-blue: hsl(234, 39%, 85%);
+  --darkmode-light-grayish-blue-hover: hsl(236, 33%, 92%);
+  --darkmode-dark-grayish-blue: hsl(234, 11%, 52%);
+  --darkmode-very-dark-grayish-blue: hsl(233, 14%, 35%);
+  --darkmode-very-dark-grayish-blue-two: hsl(237, 14%, 26%);
+  --clr-green-dark: rgb(25, 228, 25);
+  --clr-red-light: rgb(226, 77, 77);
+}
+
+.mode {
+  --very-light-grey: hsl(237, 14%, 26%);
+  --very-light-grayish-blue: hsl(233, 14%, 35%);
+  --light-grayish-blue: hsl(234, 11%, 52%);
+  --dark-grayish-blue: hsl(236, 33%, 92%);
+  --very-dark-grayish-blue: hsl(234, 39%, 85%);
+
+  --darkmode-very-dark-blue: hsl(0, 0%, 98%);
+  --darkmode-very-dark-desaturated-blue: hsl(236, 33%, 92%);
+  --darkmode-light-grayish-blue: hsl(234, 39%, 85%);
+  --darkmode-light-grayish-blue-hover: hsl(236, 9%, 61%);
+  --darkmode-dark-grayish-blue: hsl(233, 11%, 84%);
+  --darkmode-very-dark-grayish-blue: hsl(233, 14%, 35%);
+  --darkmode-very-dark-grayish-blue-two: hsl(0, 0%, 98%);
+  --clr-green-dark: rgb(111, 255, 111);
+  --clr-red-light: rgb(196, 31, 31);
+}
+
+body {
+  font-family: "josefin sans", sans-serif;
+  width: 95vw;
+  height: 100%;
+  font-size: 18px;
+  max-width: 1200px;
+  background-color: var(--darkmode-very-dark-blue);
+  overflow: hidden;
+}
+
+button,
+.lin,
+.items-left {
+  border: none;
+  padding: 0.25rem 0.45rem;
+  border-radius: 25px;
+  font-size: 10px;
+  cursor: pointer;
+  background-color: var(--darkmode-light-grayish-blue);
+  cursor: pointer;
+}
+
+.header {
+  width: 100vw;
+  height: 150px;
+  background: url(./images/bg-desktop-dark.jpg) center center/cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header.show {
+  background: url(./images/bg-desktop-light.jpg) center center/cover;
+}
+
+.header .container {
+  width: 65%;
+  max-width: 1200px;
+}
+
+.header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h3 {
+  font-size: 20px;
+  letter-spacing: 5px;
+  color: var(--very-light-grey);
+}
+
+.wrapper .mode {
+  cursor: pointer;
+}
+
+/*.wrapp {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+}*/
+
+.main {
+  width: 90%;
+  height: auto;
+  padding: 1rem;
+  margin: -3.25rem auto 0;
+  max-width: 1200px;
+}
+.main .circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--darkmode-very-dark-desaturated-blue);
+  margin: 0 auto;
+  border-radius: 5px;
+  padding: 0.5rem 0.25rem;
+  width: 100%;
+}
+
+#checkbox {
+  border-radius: 50%;
+}
+
+.main .todo {
+  border: none;
+  background: var(--darkmode-very-dark-desaturated-blue);
+  margin-left: 2rem;
+  color: var(--very-light-grey);
+  outline: none;
+}
+
+.main .todo:focus {
+  outline: none;
+}
+
+.main .todo::placeholder {
+  font-size: 10px;
+  color: var(--very-light-grey);
+}
+
+.todo-con {
+  visibility: hidden;
+}
+
+.todo-con.show {
+  visibility: visible;
+}
+
+.show {
+  visibility: visible;
+}
+
+.todo-item {
+  color: var(--very-light-grey);
+}
+
+.main .submit-btn {
+  border: none;
+  padding: 0.25rem 0.45rem;
+  border-radius: 25px;
+  font-size: 10px;
+  cursor: pointer;
+  background-color: var(--darkmode-light-grayish-blue);
+}
+
+.main .clear-btn {
+  border: none;
+  font-size: 10px;
+  cursor: pointer;
+  background: transparent;
+  letter-spacing: 5px;
+  color: var(--very-light-grey);
+}
+
+/*.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}*/
+
+button {
+  cursor: pointer;
+}
+
+.todo-con .clear-all {
+  display: grid;
+  place-items: center;
+}
+
+.todos {
+  text-transform: capitalize;
+  width: 85%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem;
+  margin: 0.4rem auto;
+  color: var(--very-light-grey);
+}
+
+.todos.donee {
+  display: flex;
+  text-decoration: line-through;
+}
+
+.pcompleted,
+.pactive {
+  display: none;
+  text-align: center;
+  color: var(--very-light-grey);
+}
+
+.pcompleted.see,
+.pactive.see {
+  display: block;
+}
+
+.alert {
+  letter-spacing: 5px;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--very-light-grey);
+}
+
+.alert-success {
+  color: var(--clr-green-dark);
+}
+
+.alert-danger {
+  color: var(--clr-red-light);
+}
+
+.status {
+  margin: 1rem auto;
+  padding: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  max-width: 1200px;
+}
+
+.status .items-left {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  width: 70px;
+  height: 25px;
+}
+
+.status .items-left.hide {
+  display: none !important;
+}
+
+.status button {
+  text-align: center;
+  margin: 0.5rem 0.5rem;
+  width: 70px;
+  height: 25px;
+}
+
+@media (max-width: 450px) {
+  .main .circle {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-color: var(--darkmode-very-dark-desaturated-blue);
+    margin: 0 auto;
+    padding: 0.5rem 0.25rem;
+  }
+
+  .main .todo {
+    margin-left: 1rem;
+  }
+  .status .items-left {
+    margin: 0.5rem 0;
+    font-size: 8px;
+  }
+
+  .status button {
+    margin: 0.5rem 0;
+    font-size: 10px;
+    text-align: center;
+    width: 80px;
+    height: 25px;
+  }
+
+  .todo-con article p {
+    font-size: 12px;
+  }
+
+  .pcompleted,
+  .pactive {
+    display: none;
+    text-align: center;
+    color: var(--very-light-grey);
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 330px) {
+  .main .todo {
+    margin-left: 0.45rem;
+    width: 60%;
+  }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Todo app</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body id="body">
+    <header class="header">
+      <div class="container">
+        <div class="wrapper">
+          <div class="logo">
+            <h3>TODO</h3>
+          </div>
+          <div class="mode">
+            <img id="mode-icon" src="./images/icon-moon.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <p class="alert"></p>
+      <div class="circle">
+        <form action="" class="input-form">
+          <input
+            type="text"
+            id="todo"
+            class="todo"
+            placeholder="Enter Todo"
+            autocomplete="off"
+          />
+          <button id="submit-btn" type="submit" class="submit-btn">
+            Add todo
+          </button>
+        </form>
+      </div>
+
+      <div class="todo-con">
+        <div class="todo-items"></div>
+        <div class="clear-all">
+          <button class="clear-btn">Clear All Items</button>
+        </div>
+      </div>
+      <p class="pcompleted">You have not completed any Todo</p>
+      <p class="pactive">Theres no active Todo</p>
+
+      <div class="status">
+        <p id="items" class="items-left">Items left</p>
+        <button id="all">All</button>
+        <button id="active">Active</button>
+        <button id="completed">Completed</button>
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
